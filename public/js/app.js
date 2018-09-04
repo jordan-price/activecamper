@@ -30126,7 +30126,7 @@ $('#type').on('change', function () {
 });
 
 $('#startDate').datetimepicker({
-  format: 'YYYY-M-DD HH:mm:SS',
+  format: 'YYYY-M-DD HH:mm',
   allowInputToggle: true
 });
 

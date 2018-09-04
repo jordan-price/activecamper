@@ -26,7 +26,7 @@ class StoreCampaignRequest extends FormRequest
         return [
             'type'      => 'required',
             'name'      => 'required',
-            'startDate' => 'required',
+            'startDate' => 'required|date',
             'public'    => 'required',
             "messages"  => 'required',
             'lists'     => 'required',
