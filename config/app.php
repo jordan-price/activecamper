@@ -150,6 +150,9 @@ return [
         /*
          * Package Service Providers...
          */
+        App\Providers\ActiveCampaignProvider::class,
+        App\Repositories\RepositoriesProvider::class,
+        App\Services\ServicesProvider::class,
 
         /*
          * Application Service Providers...
