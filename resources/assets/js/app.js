@@ -20,3 +20,24 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+$('.btn').on('click', function() {
+  var $this = $(this);
+  var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> loading...';
+  if ($(this).html() !== loadingText) {
+    $this.data('original-text', $(this).html());
+    $this.html(loadingText);
+  }
+  setTimeout(function() {
+    $this.html($this.data('original-text'));
+  }, 6000);
+});
+
+$('#type').on('change',function(){
+    if( $(this).val()==="recurring"){
+    $("#recurring").show()
+    }
+    else{
+    $("#recurring").hide()
+    }
+});
