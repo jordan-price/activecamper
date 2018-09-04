@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+    'activecampaign' => [
+        'url' => env('ACTIVECAMPAIGN_URL'),
+        'key' => env('ACTIVECAMPAIGN_API_KEY')
+    ],
 
 ];
