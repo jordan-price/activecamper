@@ -19,7 +19,7 @@
                         @csrf
                         <div class="form-group">
                             <select class="form-control" name="type" id="type" required>
-                               <option>Choose Campaign Type</option>
+                               <option value="">Choose Campaign Type</option>
                                @foreach ($types as $id => $type)
                                @if (old('type') == $id)
                                     <option value="{{$id}}" selected>{{$type}}</option>
@@ -37,13 +37,18 @@
 
                         <div class="form-group">
                             <label for="startDate">Schedule Date and Time (CST)</label>
-                            <input class="form-control" name="startDate" type="datetime-local" id="startDate" value="{{ old('startDate') }}" required>
+                            <div class="input-group date" id="startDate" data-target-input="nearest">
+                                <input type="text" name="startDate" class="form-control datetimepicker-input" data-target="#startDate" required/>
+                                <div class="input-group-append" data-target="#startDate" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div  class="form-group" id="recurring" style="display:none;">
                             <label for="specify">Recurring Frequency</label>
                             <select class="form-control" id="recurring" name="recurring">
-                                <option>Choose Recurring Frequency</option>
+                                <option value="">Choose Recurring Frequency</option>
                                 @foreach ($recurring as $id => $message)
                                 @if (old('recurring') == $id)
                                     <option value="{{$id}}" selected>
