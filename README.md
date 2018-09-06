@@ -83,25 +83,6 @@ Next `cd` into the application folder and run the following commands:
 **You should be good to go!**
 **But don't waste your time setting this up just head over to https://activecamper.co**
 
-## Credentials
-
-**ActiveCampaign Login**
-https://activecamper.activehosted.com/admin/
-
-- Email `camper@activecamper.co`
-- Password `secret`
-
-**ActiveCamper Login**
-https://activecamper.co/
-- Email `camper@activecamper.co`
-- Password `secret`
-- or register a new user.
-
-```php 
-ACTIVECAMPAIGN_URL=https://activecamper.api-us1.com
-ACTIVECAMPAIGN_API_KEY=4eb9675eb65c857eb3bad8283e2f4cc1201c4049c7aacb3c773ffe6df901687a49f15dbe
-```
-
 ## Ways to Improve
 
 - Add caching to the API calls to improve performance
